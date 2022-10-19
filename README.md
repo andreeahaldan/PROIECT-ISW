@@ -10,3 +10,4 @@ HOSU TEODOR
 
 HALDAN ANDREEA
 test1
+verificare
