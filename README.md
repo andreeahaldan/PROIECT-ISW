@@ -9,5 +9,5 @@ ALDICA VICTOR
 HOSU TEODOR
 
 HALDAN ANDREEA
-test1
-verificare
+
+https://www.meistertask.com/app/project/vT701dPN/proiect-isw
