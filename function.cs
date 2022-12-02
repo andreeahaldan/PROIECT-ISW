@@ -14,9 +14,9 @@ namespace PharmacyStore
     {
         protected SqlConnection getConnection()
         {
-           SqlConnection con =new SqlConnection();
-          
-            con.ConnectionString = "Data Source = DESKTOP-QJEI5AP; Initial Catalog = Pharmacy_DataBase; Integrated Security = True; Connect Timeout = 60; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            SqlConnection con = new SqlConnection();
+
+            con.ConnectionString = "Data Source = (localdb)\\ProjectModels; Initial Catalog = PharmacyDB1; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             return con;
         }
 
@@ -34,8 +34,8 @@ namespace PharmacyStore
 
         public void setData(String query, String msg)
         {
-          SqlConnection con =getConnection();
-           
+            SqlConnection con = getConnection();
+
             SqlCommand cmd = new SqlCommand();
 
             cmd.Connection = con;
@@ -44,7 +44,7 @@ namespace PharmacyStore
             cmd.ExecuteNonQuery();
             con.Close();
 
-            MessageBox.Show(msg,"Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

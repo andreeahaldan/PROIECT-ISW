@@ -16,6 +16,11 @@ namespace PharmacyStore
         {
             InitializeComponent();
         }
+        public Administrator(String user)
+        {
+            InitializeComponent();
+            admin_label.Text = user;
+        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {

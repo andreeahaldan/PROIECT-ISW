@@ -121,7 +121,7 @@
   <data name="btnLogOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABJ
-        0gAASdIBqEWK+AAAEb5JREFUaEPdm3dUVNfahw9ejQ0RK9UCir0X7AULCBYQlN6bFMFeE2NiqjFqNMaO
+        0QAASdEBBfyrlQAAEb5JREFUaEPdm3dUVNfahw9ejQ0RK9UCir0X7AULCBYQlN6bFMFeE2NiqjFqNMaO
         YleMvcVo9BoFxcSGGuOXXNs1yz9u/vjWSlw3mqvv/f0O7smZYQYRdC3Xda1nzcwe5sx+zvvuvd99zqiJ
         SLl5/Pix9ttvv9mBSq85dk+fPtX7XEKirPAgmZmZTn369GkBvF5n+vfv77VixQrHJ0+elF/47t27b7i5
         uXXUNC0ILAY5ryFrwXtgCMV///13O6syZQHCVRs3btwVB8tzdXWVzp07S+vWraVZs2bi6ekpHh4e0rRp
@@ -251,7 +251,7 @@
   <data name="btnAddUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAB4tJREFUSEutVnlUk1cWh4SwM4JLLQJFIipbEhZJkLDITpAEkcVSejwW3Fot1Dk6
+        EAAACxABrSO9dQAAB4tJREFUSEutVnlUk1cWh4SwM4JLLQJFIipbEhZJkLDITpAEkcVSejwW3Fot1Dk6
         Eil4hmLZDWIg7GsSVkUMKMiqILKDoASRTgesDo4DVoROx4U77wvfGdpj/xiF3zm/89538+73u/e++70X
         ufeBIklBQ2/DOpYdddtFH6ZF1x57y7ssBvU6hax7TENVWQ9ftrpY9yc1IzuzrXneO82fBthbvNlnbw4y
         OljAPkerBQ9r05ZPNq71IsjLE3GXlUNLXWWrN924OcjRHHZbm8IeG1Pws6XIuHfn0hhgRwM2g/Kj7npN
@@ -303,7 +303,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAN8sSURBVHhe7F0F
+        EAAACxABrSO9dQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAN8sSURBVHhe7F0F
         dBzXshSzmZmZmWRmZlu2zMyWmZmZmZmZ2U5itmOIKYbYjsPMyQvV7+qZWY3WoyTv/bBX59TZ1WhJO1PV
         1X373usFwAMPPHhB4XjQAw88eDHgeNADDzx4MeB40AMPfgvSpEnbNHXq1FGpU6eJSiNIlSr1pGRJk51O
         kTzFrjRp5FiatC44Pd+Dvx6OBz3wwELp8NLxy5QuU65s6bKjy5Ypt7tc2fKny5crjwrlKqBokaIoWKAg

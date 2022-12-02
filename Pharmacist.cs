@@ -16,8 +16,12 @@ namespace PharmacyStore
         {
             InitializeComponent();
         }
+        public Pharmacist(String User)
+        {
+            InitializeComponent();
+            pharmacist_label.Text = User;   
+        }
 
-        
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {

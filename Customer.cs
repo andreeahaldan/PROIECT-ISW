@@ -16,7 +16,11 @@ namespace PharmacyStore
         {
             InitializeComponent();
         }
-
+        public Customer(String User)
+        {
+            InitializeComponent();
+            customer_label.Text = User;
+        }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Form fm = new Form1();

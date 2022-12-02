@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.admin_label = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewUser = new Guna.UI2.WinForms.Guna2Button();
@@ -56,7 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.admin_label);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.btnViewUser);
@@ -70,34 +70,30 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // admin_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(135, 668);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 40);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "administrator";
+            this.admin_label.AutoSize = true;
+            this.admin_label.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_label.ForeColor = System.Drawing.Color.Yellow;
+            this.admin_label.Location = new System.Drawing.Point(135, 668);
+            this.admin_label.Name = "admin_label";
+            this.admin_label.Size = new System.Drawing.Size(200, 40);
+            this.admin_label.TabIndex = 7;
+            this.admin_label.Text = "administrator";
             // 
             // btnLogOut
             // 
             this.btnLogOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnLogOut.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnLogOut.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.CheckedState.Parent = this.btnLogOut;
-            this.btnLogOut.CustomImages.Parent = this.btnLogOut;
             this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.HoverState.Parent = this.btnLogOut;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnLogOut.ImageSize = new System.Drawing.Size(35, 35);
             this.btnLogOut.Location = new System.Drawing.Point(105, 560);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.ShadowDecoration.Parent = this.btnLogOut;
             this.btnLogOut.Size = new System.Drawing.Size(240, 45);
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Log Out";
@@ -109,18 +105,14 @@
             this.btnProfile.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnProfile.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnProfile.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnProfile.CheckedState.Parent = this.btnProfile;
-            this.btnProfile.CustomImages.Parent = this.btnProfile;
             this.btnProfile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.HoverState.Parent = this.btnProfile;
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnProfile.ImageSize = new System.Drawing.Size(35, 35);
             this.btnProfile.Location = new System.Drawing.Point(105, 490);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.ShadowDecoration.Parent = this.btnProfile;
             this.btnProfile.Size = new System.Drawing.Size(240, 45);
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Update Profile";
@@ -132,18 +124,14 @@
             this.btnViewUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnViewUser.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnViewUser.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnViewUser.CheckedState.Parent = this.btnViewUser;
-            this.btnViewUser.CustomImages.Parent = this.btnViewUser;
             this.btnViewUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnViewUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewUser.ForeColor = System.Drawing.Color.White;
-            this.btnViewUser.HoverState.Parent = this.btnViewUser;
             this.btnViewUser.Image = ((System.Drawing.Image)(resources.GetObject("btnViewUser.Image")));
             this.btnViewUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnViewUser.ImageSize = new System.Drawing.Size(35, 35);
             this.btnViewUser.Location = new System.Drawing.Point(105, 419);
             this.btnViewUser.Name = "btnViewUser";
-            this.btnViewUser.ShadowDecoration.Parent = this.btnViewUser;
             this.btnViewUser.Size = new System.Drawing.Size(240, 45);
             this.btnViewUser.TabIndex = 4;
             this.btnViewUser.Text = "View User";
@@ -155,18 +143,14 @@
             this.btnAddUser.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnAddUser.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnAddUser.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnAddUser.CheckedState.Parent = this.btnAddUser;
-            this.btnAddUser.CustomImages.Parent = this.btnAddUser;
             this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.HoverState.Parent = this.btnAddUser;
             this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
             this.btnAddUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddUser.ImageSize = new System.Drawing.Size(35, 35);
             this.btnAddUser.Location = new System.Drawing.Point(105, 355);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.ShadowDecoration.Parent = this.btnAddUser;
             this.btnAddUser.Size = new System.Drawing.Size(240, 45);
             this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
@@ -178,18 +162,14 @@
             this.btnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDashboard.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnDashboard.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnDashboard.CheckedState.Parent = this.btnDashboard;
-            this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Parent = this.btnDashboard;
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnDashboard.ImageSize = new System.Drawing.Size(35, 35);
             this.btnDashboard.Location = new System.Drawing.Point(105, 284);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.ShadowDecoration.Parent = this.btnDashboard;
             this.btnDashboard.Size = new System.Drawing.Size(240, 45);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
@@ -300,16 +280,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button btnLogOut;
-        private Guna.UI2.WinForms.Guna2Button btnProfile;
+       private Guna.UI2.WinForms.Guna2Button btnLogOut;
+       private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnViewUser;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label admin_label;
+      private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private AdministratorUC.UC_Dashboard uC_Dashboard1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private AdministratorUC.UC_AddUser uC_AddUser1;
