@@ -14,8 +14,8 @@ namespace PharmacyStore.AdministratorUC
     public partial class UC_ViewUser : UserControl
     {
         function fn = new function();
-        String Username;
-        public static string ID { get; internal set; }
+        String Selected_Username;
+        public static string Username;
 
         public UC_ViewUser()
         {
@@ -41,7 +41,7 @@ namespace PharmacyStore.AdministratorUC
 
             try
             {
-                Username = guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                Selected_Username = guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             }
             catch
             {
@@ -53,13 +53,13 @@ namespace PharmacyStore.AdministratorUC
         {
             if (MessageBox.Show("Are you sure ?", "Delete Confirmation !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                if (ID == Username)
+                if (Selected_Username == Username)
                 {
                     MessageBox.Show("You can't delete your own profile");
                 }
                 else
                 {
-                    String Query = "delete from users where username='" + Username + "'";
+                    String Query = "delete from users where username='" + Selected_Username + "'";
                     fn.setData(Query, "User data was deleted");
                     UC_ViewUser_Load(this, null);
                 }

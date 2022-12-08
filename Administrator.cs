@@ -21,7 +21,8 @@ namespace PharmacyStore
         {
             InitializeComponent();
             admin_label.Text = user;
-            UC_ViewUser.ID=user;
+            UC_ViewUser.Username=user;
+            UC_Profile.Username = user;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
