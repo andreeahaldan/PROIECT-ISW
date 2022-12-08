@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PharmacyStore.AdministratorUC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace PharmacyStore
         {
             InitializeComponent();
             admin_label.Text = user;
+            UC_ViewUser.ID=user;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

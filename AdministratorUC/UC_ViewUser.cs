@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PharmacyStore.AdministratorUC
 {
     public partial class UC_ViewUser : UserControl
     {
+        function fn = new function();
+        String Username;
+        public static string ID { get; internal set; }
 
-        
         public UC_ViewUser()
         {
             InitializeComponent();
@@ -21,7 +24,52 @@ namespace PharmacyStore.AdministratorUC
 
         private void UC_ViewUser_Load(object sender, EventArgs e)
         {
-            
+            String query = "Select * from users";
+            DataSet ds = fn.getData(query);
+            guna2DataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            String query = "Select * from users where username like '" + txtUserName.Text + "%'";
+            DataSet ds = fn.getData(query);
+            guna2DataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                Username = guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure ?", "Delete Confirmation !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (ID == Username)
+                {
+                    MessageBox.Show("You can't delete your own profile");
+                }
+                else
+                {
+                    String Query = "delete from users where username='" + Username + "'";
+                    fn.setData(Query, "User data was deleted");
+                    UC_ViewUser_Load(this, null);
+                }
+            }
+
+        }
+
+        private void btnSync_Click(object sender, EventArgs e)
+        {
+            UC_ViewUser_Load(this, null);
         }
     }
 }
