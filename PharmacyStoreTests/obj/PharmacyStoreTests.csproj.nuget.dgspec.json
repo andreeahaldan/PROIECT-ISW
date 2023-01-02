@@ -1,50 +1,45 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj": {}
+    "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj": {
+    "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj",
+        "projectUniqueName": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj",
         "projectName": "PharmacyStore",
-        "projectPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj",
-        "frameworks": {
-          "net472": {
-            "projectReferences": {}
-          }
-        }
+        "projectPath": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj": {
+    "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
+        "projectUniqueName": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
         "projectName": "PharmacyStoreTests",
-        "projectPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
-        "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\obj\\",
+        "projectPath": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net60"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net60": {
             "projectReferences": {
-              "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj": {
-                "projectPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj"
+              "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj": {
+                "projectPath": "C:\\Users\\Andreea\\OneDrive\\Documents\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj"
               }
             }
           }
@@ -56,8 +51,7 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net60": {
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -76,23 +70,7 @@
               "version": "[3.1.2, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

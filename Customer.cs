@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PharmacyStore.CustomerUC;
 
 namespace PharmacyStore
 {
@@ -20,6 +21,7 @@ namespace PharmacyStore
         {
             InitializeComponent();
             customer_label.Text = User;
+            UC_C_Profile.Username = User;
         }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
