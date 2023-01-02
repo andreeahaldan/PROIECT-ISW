@@ -113,6 +113,7 @@
     <Compile Include="CustomerUC\UC_C_ViewPurchase.Designer.cs">
       <DependentUpon>UC_C_ViewPurchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
