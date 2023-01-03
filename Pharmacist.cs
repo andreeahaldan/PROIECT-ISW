@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PharmacyStore.PharmacistUC;
 
 namespace PharmacyStore
 {
@@ -19,7 +20,8 @@ namespace PharmacyStore
         public Pharmacist(String User)
         {
             InitializeComponent();
-            pharmacist_label.Text = User;   
+            pharmacist_label.Text = User;
+            UC_P_Profile.Username = User;
         }
 
 
