@@ -166,7 +166,7 @@ namespace PharmacyStore.CustomerUC
                     quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
                     newQuantity = quantity + noOfUnit;
 
-                    query = "update medicine set quantity = ''" + newQuantity  +"' where mid = '" + valueId + "'";
+                    query = "update medicine set quantity = '" + newQuantity  +"' where mid = '" + valueId + "'";
                     fn.setData(query, "Medicine removed from cart.");
                     totalPrice = totalPrice - valuePrice;
                     TotalLabel.Text = totalPrice.ToString();
