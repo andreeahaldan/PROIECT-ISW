@@ -1,4 +1,4 @@
-﻿ using System;
+ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Xml.Linq;
+using Aspose.Pdf.Drawing;
 
 namespace PharmacyStore.PharmacistUC
 {
@@ -26,13 +27,14 @@ namespace PharmacyStore.PharmacistUC
         private void btn_search_Click(object sender, EventArgs e)
         {
 
-            if (txtMedID.Text!="")
+            if (txtMedName.Text!="")
             {
-                query = "select * from medicine where mid= '"+txtMedID.Text+"'";
+                query = "select * from medicine where mname like '" + txtMedName.Text + "%'";
                 DataSet ds = fn.getData(query);
                 if (ds.Tables[0].Rows.Count !=0) 
                 {
                     txtMedName.Text = ds.Tables[0].Rows[0][2].ToString();
+                    txtMedID.Text = ds.Tables[0].Rows[0][1].ToString();
                     txtMedNr.Text = ds.Tables[0].Rows[0][3].ToString();
                     manDate.Text = ds.Tables[0].Rows[0][4].ToString();
                     expDate.Text = ds.Tables[0].Rows[0][5].ToString();
@@ -42,7 +44,7 @@ namespace PharmacyStore.PharmacistUC
                 }
                 else
                 {
-                    MessageBox.Show("No medicine with that ID exists","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("No medicine with that name exists","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
             else
@@ -56,8 +58,8 @@ namespace PharmacyStore.PharmacistUC
         private void clearAll()
         {
 
-            txtMedID.Clear();
             txtMedName.Clear();
+            txtMedID.Clear();
             txtMedNr.Clear();
             txtPPU.Clear();
             txtQuan.Clear();
@@ -87,7 +89,7 @@ namespace PharmacyStore.PharmacistUC
 
             totalQuan = quan + addquan;
 
-            query = "update medicine set mname= '"+medname+ "' , mnumber= '"+mednr+ "', mDate= '"+mdate+ "', eDate= '"+edate+"', quantity=" +totalQuan+", perUnit="+price+" where mid= '"+txtMedID.Text+"'  ";
+            query = "update medicine set mname= '"+medname+ "' , mnumber= '"+mednr+ "', mDate= '"+mdate+ "', eDate= '"+edate+"', quantity=" +totalQuan+", perUnit="+price+" where mid= '"+txtMedName.Text+"'  ";
             fn.setData(query, "Medicine details updated");
 
         }
