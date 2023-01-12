@@ -27,7 +27,7 @@ namespace PharmacyStore.CustomerUC
             query = "select mname from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy') and quantity > '0'";
             ds = fn.getData(query);
 
-            for(int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 listBoxMedicines.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
@@ -45,7 +45,7 @@ namespace PharmacyStore.CustomerUC
             query = "select mname from medicine where mname like '" + txtSearch.Text + "%' and eDate FORMAT (getdate(), 'dd.MM.yyyy') and quantity > '0'";
             ds = fn.getData(query);
 
-            for(int i = 0; i< ds.Tables[0].Rows.Count; i++)
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 listBoxMedicines.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
@@ -67,7 +67,7 @@ namespace PharmacyStore.CustomerUC
 
         private void txtNumberOfUnits_TextChanged(object sender, EventArgs e)
         {
-            if(txtNumberOfUnits.Text != "")
+            if (txtNumberOfUnits.Text != "")
             {
                 Int64 unitPrice = Int64.Parse(txtPricePerUnit.Text);
                 Int64 noOfUnit = Int64.Parse(txtNumberOfUnits.Text);
@@ -85,8 +85,9 @@ namespace PharmacyStore.CustomerUC
         protected Int64 quantity, newQuantity;
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if(txtMedicineID.Text != "")
-            {   if (txtNumberOfUnits.Text == "")
+            if (txtMedicineID.Text != "")
+            {
+                if (txtNumberOfUnits.Text == "")
                     MessageBox.Show("Select desired amount first", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
@@ -97,7 +98,7 @@ namespace PharmacyStore.CustomerUC
                 query = "select quantity from medicine where mid = '" + txtMedicineID.Text + "'";
                 ds = fn.getData(query);
 
-                if(newQuantity >= 0)
+                if (newQuantity >= 0)
                 {
                     n = guna2DataGridView1.Rows.Add();
                     guna2DataGridView1.Rows[n].Cells[0].Value = txtMedicineID.Text;
@@ -147,13 +148,14 @@ namespace PharmacyStore.CustomerUC
                 valuePrice = int.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
                 valueId = guna2DataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 noOfUnit = Int64.Parse(guna2DataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString());
-            }catch(Exception)
+            }
+            catch (Exception)
             { }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if(valueId != null)
+            if (valueId != null)
             {
                 try
                 {
@@ -163,6 +165,17 @@ namespace PharmacyStore.CustomerUC
                 {
 
                 }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 finally
                 {
                     query = "select quantity from medicine where mid = '" + valueId + "'";
@@ -170,7 +183,7 @@ namespace PharmacyStore.CustomerUC
                     quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
                     newQuantity = quantity + noOfUnit;
 
-                    query = "update medicine set quantity = '" + newQuantity  +"' where mid = '" + valueId + "'";
+                    query = "update medicine set quantity = '" + newQuantity + "' where mid = '" + valueId + "'";
                     fn.setData(query, "Medicine removed from cart.");
                     totalPrice = totalPrice - valuePrice;
                     TotalLabel.Text = totalPrice.ToString();
@@ -182,22 +195,20 @@ namespace PharmacyStore.CustomerUC
 
         private void btnPurchasePrint_Click(object sender, EventArgs e)
         {
-            DGVPrinter print = new DGVPrinter();
-            print.Title = "Medicine Bill";
-            print.SubTitle = String.Format("Date: {0}", DateTime.Now.Date);
-            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
-            print.PageNumbers = true;
-            print.PageNumberInHeader = false;
-            print.PorportionalColumns = true;
-            print.HeaderCellAlignment = StringAlignment.Near;
-            print.Footer = "Total Payable Amount : " + TotalLabel.Text;
-            print.FooterSpacing = 15;
-            print.PrintDataGridView(guna2DataGridView1);
+            DialogResult res = MessageBox.Show("Are you sure you want to Purchase?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-            totalPrice = 0;
-            TotalLabel.Text = "";
-            guna2DataGridView1.DataSource = 0;
+            if (res == DialogResult.Yes)
+            {
+                String X = TotalLabel.Text;
+                PurchaseForm form = new PurchaseForm(X, guna2DataGridView1);
+
+                form.Show();
+
+                //Some task…
+                totalPrice = 0;
+                TotalLabel.Text = "";
+            }
+
         }
-
     }
 }

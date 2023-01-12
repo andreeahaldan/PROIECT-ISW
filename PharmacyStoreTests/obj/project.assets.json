@@ -6787,19 +6787,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Victor\\.nuget\\packages\\": {}
+    "C:\\Users\\Claudiu-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
+      "projectUniqueName": "C:\\Users\\Claudiu-\\OneDrive\\Documente\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
       "projectName": "PharmacyStoreTests",
-      "projectPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
-      "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStoreTests\\obj\\",
+      "projectPath": "C:\\Users\\Claudiu-\\OneDrive\\Documente\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\PharmacyStoreTests.csproj",
+      "packagesPath": "C:\\Users\\Claudiu-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Claudiu-\\OneDrive\\Documente\\GitHub\\PROIECT-ISW\\PharmacyStoreTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Victor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Claudiu-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6813,8 +6813,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj": {
-              "projectPath": "C:\\Users\\Victor\\Documents\\ISW\\Pharmacy\\PROIECT-ISW\\PharmacyStore.csproj"
+            "C:\\Users\\Claudiu-\\OneDrive\\Documente\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj": {
+              "projectPath": "C:\\Users\\Claudiu-\\OneDrive\\Documente\\GitHub\\PROIECT-ISW\\PharmacyStore.csproj"
             }
           }
         }
@@ -6862,7 +6862,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
