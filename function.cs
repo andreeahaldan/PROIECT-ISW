@@ -29,7 +29,7 @@ namespace PharmacyStore
             cmd.CommandText = query;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds);
+               da.Fill(ds);
             return ds;
         }
 

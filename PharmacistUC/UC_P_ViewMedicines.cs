@@ -29,7 +29,7 @@ namespace PharmacyStore.PharmacistUC
 
         private void txtSeach_TextChanged(object sender, EventArgs e)
         {
-            query = "select * from medicine where mname like '" + txtSeach.Text + "%'";
+            query = "select * from medicine where mname like '" + txtSearch.Text + "%'";
             setDataGridView(query);
         }
 

@@ -26,13 +26,13 @@ namespace PharmacyStore.PharmacistUC
 
             if (txtCheckbox.SelectedIndex == 0)
             {
-                query = "select * from medicine where eDate >= getdate()";
+                query = "select * from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy')";
                 setDataGridView(query, "Valid medicines", Color.Green);
 
             }
             else if (txtCheckbox.SelectedIndex == 1)
             {
-                query = "select * from medicine where eDate <= getdate()";
+                query = "select * from medicine where eDate <= FORMAT (getdate(), 'dd.MM.yyyy')";
                 setDataGridView(query, "Expired medicines", Color.Red);
 
             }

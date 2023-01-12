@@ -24,7 +24,7 @@ namespace PharmacyStore.CustomerUC
         private void UC_C_BuyMedicine_Load(object sender, EventArgs e)
         {
             listBoxMedicines.Items.Clear();
-            query = "select mname from medicine where eDate >=getdate() and quantity > '0'";
+            query = "select mname from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy') and quantity > '0'";
             ds = fn.getData(query);
 
             for(int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -42,7 +42,7 @@ namespace PharmacyStore.CustomerUC
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             listBoxMedicines.Items.Clear();
-            query = "select mname from medicine where mname like '" + txtSearch.Text + "%' and eDate >= getdate() and quantity > '0'";
+            query = "select mname from medicine where mname like '" + txtSearch.Text + "%' and eDate FORMAT (getdate(), 'dd.MM.yyyy') and quantity > '0'";
             ds = fn.getData(query);
 
             for(int i = 0; i< ds.Tables[0].Rows.Count; i++)
