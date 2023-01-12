@@ -86,12 +86,16 @@ namespace PharmacyStore.CustomerUC
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
             if(txtMedicineID.Text != "")
-            {
+            {   if (txtNumberOfUnits.Text == "")
+                    MessageBox.Show("Select desired amount first", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
+                    newQuantity = quantity - Int64.Parse(txtNumberOfUnits.Text);
+                }
+
                 query = "select quantity from medicine where mid = '" + txtMedicineID.Text + "'";
                 ds = fn.getData(query);
-
-                quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
-                newQuantity = quantity - Int64.Parse(txtNumberOfUnits.Text);
 
                 if(newQuantity >= 0)
                 {
