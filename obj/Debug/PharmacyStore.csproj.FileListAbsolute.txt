@@ -1,5 +1,4 @@
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.csproj.AssemblyReference.cache
-C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.csproj.SuggestedBindingRedirects.cache
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.Administrator.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.AdministratorUC.UC_AddUser.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.AdministratorUC.UC_Dashboard.resources
@@ -10,7 +9,6 @@ C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.CustomerUC.UC_C_BuyMedicine.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.CustomerUC.UC_C_Dashboard.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.CustomerUC.UC_C_Profile.resources
-C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.CustomerUC.UC_C_ViewPurchase.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.Form1.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.Pharmacist.resources
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.PharmacistUC.UC_P_AddMedicines.resources

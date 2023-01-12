@@ -259,7 +259,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private CustomerUC.UC_C_Profile uC_C_Profile1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private CustomerUC.UC_C_ViewPurchase uC_C_ViewPurchase1;
+     //   private CustomerUC.UC_C_ViewPurchase uC_C_ViewPurchase1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private CustomerUC.UC_C_BuyMedicine uC_C_BuyMedicine1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;

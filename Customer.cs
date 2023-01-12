@@ -34,7 +34,7 @@ namespace PharmacyStore
         {
             uC_C_Dashboard1.Visible = true;
             uC_C_Profile1.Visible = false;
-            uC_C_ViewPurchase1.Visible = false;
+            //uC_C_ViewPurchase1.Visible = false;
             uC_C_BuyMedicine1.Visible = false;
             btnDashboard.PerformClick();
         }
@@ -47,8 +47,8 @@ namespace PharmacyStore
 
         private void btnViewPurchase_Click(object sender, EventArgs e)
         {
-            uC_C_ViewPurchase1.Visible = true;
-            uC_C_ViewPurchase1.BringToFront();
+            //uC_C_ViewPurchase1.Visible = true;
+          //  uC_C_ViewPurchase1.BringToFront();
         }
 
         private void btnBuyMedicine_Click(object sender, EventArgs e)

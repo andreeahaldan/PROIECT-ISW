@@ -158,20 +158,20 @@ namespace PharmacyStore.CustomerUC
             { }
         }
 
-    /*    private void btnSaveasPDF_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Document was saved");
+        
 
+        private void btnPurchaseDownload_Click(object sender, EventArgs e)
+        {
             PdfDocument document = new PdfDocument();
             //Add a page
             PdfPage page = document.Pages.Add();
             PdfGraphics graphics = page.Graphics;
             //Set the standard font.
-            PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 20);
+            PdfFont titlefont = new PdfStandardFont(PdfFontFamily.TimesRoman, 20);
+            PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 10);
             //Draw the text.
-            graphics.DrawString("Medicine Bill", font, PdfBrushes.Black,
-                new Syncfusion.Drawing.PointF(120, 10));
-
+            graphics.DrawString("Medicine Bill", titlefont, PdfBrushes.Black,
+                new Syncfusion.Drawing.PointF(160, 10));
 
             //Create a PdfGrid
             PdfGrid pdfGrid = new PdfGrid();
@@ -180,27 +180,54 @@ namespace PharmacyStore.CustomerUC
             //Add columns to the DataTable
             dataTable.Columns.Add("ProductID");
             dataTable.Columns.Add("ProductName");
-            dataTable.Columns.Add("Quantity");
+            dataTable.Columns.Add("Date");
             dataTable.Columns.Add("UnitPrice");
+            dataTable.Columns.Add("Quantity");
             dataTable.Columns.Add("Price");
-            //Add rows to the DataTable
-            //dataTable.Rows.Add(new object[] { "CA-1098", "Queso Cabrales", "12", "14", "1", "167" });
-            dataTable.Rows.Add(new object[] { "CA-1098", "Queso Cabrales", "12", "14", "1", "167" });
-            //Assign data source
+
+            try
+            {
+                foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                {
+                    if (row.Index == guna2DataGridView1.RowCount - 1)
+                        break;
+                    else
+                    {
+
+
+                        String[] obj = {" "+row.Cells[0].Value.ToString(),
+                            " "+row.Cells[1].Value.ToString(),
+                            " "+row.Cells[2].Value.ToString(),
+                           " "+ row.Cells[3].Value.ToString(),
+                            " "+row.Cells[4].Value.ToString(),
+                            " "+row.Cells[5].Value.ToString() };
+
+                        MessageBox.Show(obj[0] + obj[1] + obj[2] + obj[3] + obj[4] + obj[5]);
+                        dataTable.Rows.Add(new object[] { obj[0], obj[1], obj[2], obj[3], obj[4], obj[5] });
+
+
+                    }
+
+
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("" + ex); };
             pdfGrid.DataSource = dataTable;
-            //Draw grid to the page of PDF document
             pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 100));
-            //Save the document
 
-            //Close the document
+            graphics.DrawString("Total Payable Amount : " + TotalLabel.Text, font, PdfBrushes.Black,
+                  new Syncfusion.Drawing.PointF(340, 100 + 20 * guna2DataGridView1.RowCount));
+            ;
 
-            FileStream stream = new FileStream("output3.pdf", FileMode.OpenOrCreate);
+            Random r = new Random();
+            String s = "../../Receipts/Receipt" + r.Next() + ".pdf";
+            FileStream stream = new FileStream(s, FileMode.Create);
             document.Save(stream);
             //Close the document.
             document.Close(true);
-        
-    
-    }*/
+            MessageBox.Show("Document was saved");
+
+        }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
@@ -235,16 +262,6 @@ namespace PharmacyStore.CustomerUC
 
         private void btnPurchasePrint_Click(object sender, EventArgs e)
         {
-            //DialogResult res = MessageBox.Show("Are you sure you want to Purchase?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            ////   if (res == DialogResult.Yes)
-            //  {
-            //  String total_price = TotalLabel.Text;
-            //  PurchaseForm form = new PurchaseForm(total_price, guna2DataGridView1);
-
-            //   form.Show();
-
-
 
             DGVPrinter print = new DGVPrinter();
             print.Title = "Medicine Bill";
@@ -261,7 +278,7 @@ namespace PharmacyStore.CustomerUC
             
             totalPrice = 0;
             TotalLabel.Text = "";
-          //  }
+   
 
         }
     }
