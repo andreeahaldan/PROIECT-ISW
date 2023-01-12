@@ -98,32 +98,32 @@ namespace PharmacyStore.CustomerUC
                 {
                     quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
                     newQuantity = quantity - Int64.Parse(txtNumberOfUnits.Text);
+
+
+                    query = "select quantity from medicine where mid = '" + txtMedicineID.Text + "'";
+                    ds = fn.getData(query);
+
+                    if (newQuantity >= 0)
+                    {
+                        n = guna2DataGridView1.Rows.Add();
+                        guna2DataGridView1.Rows[n].Cells[0].Value = txtMedicineID.Text;
+                        guna2DataGridView1.Rows[n].Cells[1].Value = txtMedicineName.Text;
+                        guna2DataGridView1.Rows[n].Cells[2].Value = txtExpireDate.Text;
+                        guna2DataGridView1.Rows[n].Cells[3].Value = txtPricePerUnit.Text;
+                        guna2DataGridView1.Rows[n].Cells[4].Value = txtNumberOfUnits.Text;
+                        guna2DataGridView1.Rows[n].Cells[5].Value = txtTotalPrice.Text;
+
+                        totalPrice = totalPrice + int.Parse(txtTotalPrice.Text);
+                        TotalLabel.Text = totalPrice.ToString();
+
+                        query = "update medicine set quantity = '" + newQuantity + "' where mid = '" + txtMedicineID.Text + "' ";
+                        fn.setData(query, "Medicine Added.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Medicine is out of stock!\n Only " + quantity + " left.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-
-                query = "select quantity from medicine where mid = '" + txtMedicineID.Text + "'";
-                ds = fn.getData(query);
-
-                if (newQuantity >= 0)
-                {
-                    n = guna2DataGridView1.Rows.Add();
-                    guna2DataGridView1.Rows[n].Cells[0].Value = txtMedicineID.Text;
-                    guna2DataGridView1.Rows[n].Cells[1].Value = txtMedicineName.Text;
-                    guna2DataGridView1.Rows[n].Cells[2].Value = txtExpireDate.Text;
-                    guna2DataGridView1.Rows[n].Cells[3].Value = txtPricePerUnit.Text;
-                    guna2DataGridView1.Rows[n].Cells[4].Value = txtNumberOfUnits.Text;
-                    guna2DataGridView1.Rows[n].Cells[5].Value = txtTotalPrice.Text;
-
-                    totalPrice = totalPrice + int.Parse(txtTotalPrice.Text);
-                    TotalLabel.Text = totalPrice.ToString();
-
-                    query = "update medicine set quantity = '" + newQuantity + "' where mid = '" + txtMedicineID.Text + "' ";
-                    fn.setData(query, "Medicine Added.");
-                }
-                else
-                {
-                    MessageBox.Show("Medicine is out of stock!\n Only " + quantity + " left.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
                 clearAll();
                 UC_C_BuyMedicine_Load(this, null);
             }

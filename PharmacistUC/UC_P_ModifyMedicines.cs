@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Xml.Linq;
-using Aspose.Pdf.Drawing;
+
 
 namespace PharmacyStore.PharmacistUC
 {

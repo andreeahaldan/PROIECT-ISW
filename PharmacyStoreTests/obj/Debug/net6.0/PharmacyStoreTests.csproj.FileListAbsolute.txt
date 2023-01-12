@@ -101,3 +101,7 @@ C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\obj\Debug\
 C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\obj\Debug\net6.0\PharmacyStoreTests.pdb
 C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\obj\Debug\net6.0\PharmacyStoreTests.genruntimeconfig.cache
 C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\obj\Debug\net6.0\ref\PharmacyStoreTests.dll
+C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\bin\Debug\net6.0\Syncfusion.Pdf.Portable.dll
+C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\bin\Debug\net6.0\Syncfusion.Compression.Portable.dll
+C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\bin\Debug\net6.0\Syncfusion.Pdf.Portable.xml
+C:\Users\Victor\Documents\ISW\Pharmacy\PROIECT-ISW\PharmacyStoreTests\bin\Debug\net6.0\Syncfusion.Compression.Portable.xml

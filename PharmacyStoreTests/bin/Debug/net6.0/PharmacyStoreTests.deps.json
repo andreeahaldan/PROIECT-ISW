@@ -1148,6 +1148,22 @@
             "fileVersion": "2.0.3.5"
           }
         }
+      },
+      "Syncfusion.Pdf.Portable/20.4200.0.43": {
+        "runtime": {
+          "Syncfusion.Pdf.Portable.dll": {
+            "assemblyVersion": "20.4200.0.43",
+            "fileVersion": "20.4200.0.43"
+          }
+        }
+      },
+      "Syncfusion.Compression.Portable/20.4200.0.43": {
+        "runtime": {
+          "Syncfusion.Compression.Portable.dll": {
+            "assemblyVersion": "20.4200.0.43",
+            "fileVersion": "20.4200.0.43"
+          }
+        }
       }
     }
   },
@@ -1833,6 +1849,16 @@
       "sha512": ""
     },
     "Guna.UI2/2.0.3.5": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Pdf.Portable/20.4200.0.43": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Syncfusion.Compression.Portable/20.4200.0.43": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

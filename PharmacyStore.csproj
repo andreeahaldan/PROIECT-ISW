@@ -133,6 +133,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="function.cs" />
+    <Compile Include="InjectionChecker.cs" />
     <Compile Include="Pharmacist.cs">
       <SubType>Form</SubType>
     </Compile>

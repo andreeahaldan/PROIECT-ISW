@@ -77,7 +77,7 @@
             this.txtMedID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedID.ForeColor = System.Drawing.Color.Black;
             this.txtMedID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedID.Location = new System.Drawing.Point(50, 179);
+            this.txtMedID.Location = new System.Drawing.Point(50, 271);
             this.txtMedID.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMedID.Name = "txtMedID";
             this.txtMedID.PasswordChar = '\0';
@@ -90,7 +90,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(46, 153);
+            this.label10.Location = new System.Drawing.Point(46, 245);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 20);
@@ -109,7 +109,7 @@
             this.txtMedName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedName.ForeColor = System.Drawing.Color.Black;
             this.txtMedName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMedName.Location = new System.Drawing.Point(50, 283);
+            this.txtMedName.Location = new System.Drawing.Point(50, 156);
             this.txtMedName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMedName.Name = "txtMedName";
             this.txtMedName.PasswordChar = '\0';
@@ -122,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 257);
+            this.label2.Location = new System.Drawing.Point(46, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
@@ -269,7 +269,7 @@
             this.manDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.manDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.manDate.Location = new System.Drawing.Point(50, 414);
-            this.manDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manDate.Margin = new System.Windows.Forms.Padding(2);
             this.manDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.manDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.manDate.Name = "manDate";
@@ -285,7 +285,7 @@
             this.expDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.expDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.expDate.Location = new System.Drawing.Point(385, 179);
-            this.expDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.expDate.Margin = new System.Windows.Forms.Padding(2);
             this.expDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.expDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.expDate.Name = "expDate";
@@ -325,8 +325,8 @@
             this.btn_search.HoverState.BorderColor = System.Drawing.Color.Black;
             this.btn_search.HoverState.FillColor = System.Drawing.Color.White;
             this.btn_search.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
-            this.btn_search.Location = new System.Drawing.Point(205, 216);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_search.Location = new System.Drawing.Point(205, 193);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(100, 37);
             this.btn_search.TabIndex = 25;
@@ -344,7 +344,7 @@
             this.btn_update.HoverState.FillColor = System.Drawing.Color.White;
             this.btn_update.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
             this.btn_update.Location = new System.Drawing.Point(385, 406);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(104, 37);
             this.btn_update.TabIndex = 26;
@@ -362,7 +362,7 @@
             this.btn_reset.HoverState.FillColor = System.Drawing.Color.White;
             this.btn_reset.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
             this.btn_reset.Location = new System.Drawing.Point(536, 406);
-            this.btn_reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(2);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(104, 37);
             this.btn_reset.TabIndex = 27;
@@ -372,7 +372,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
             this.panel2.Location = new System.Drawing.Point(344, 113);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(3, 406);
             this.panel2.TabIndex = 28;
@@ -420,7 +420,7 @@
             this.Controls.Add(this.txtMedID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_P_ModifyMedicines";
             this.Size = new System.Drawing.Size(705, 624);
             this.ResumeLayout(false);
