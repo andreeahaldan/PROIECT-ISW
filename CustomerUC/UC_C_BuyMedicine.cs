@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DGVPrinterHelper;
+using System.Reflection.Emit;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Pdf.Grid;
+using Syncfusion.Pdf;
+using System.IO;
 
 namespace PharmacyStore.CustomerUC
 {
@@ -153,6 +158,50 @@ namespace PharmacyStore.CustomerUC
             { }
         }
 
+    /*    private void btnSaveasPDF_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Document was saved");
+
+            PdfDocument document = new PdfDocument();
+            //Add a page
+            PdfPage page = document.Pages.Add();
+            PdfGraphics graphics = page.Graphics;
+            //Set the standard font.
+            PdfFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 20);
+            //Draw the text.
+            graphics.DrawString("Medicine Bill", font, PdfBrushes.Black,
+                new Syncfusion.Drawing.PointF(120, 10));
+
+
+            //Create a PdfGrid
+            PdfGrid pdfGrid = new PdfGrid();
+            //Create a DataTable
+            DataTable dataTable = new DataTable();
+            //Add columns to the DataTable
+            dataTable.Columns.Add("ProductID");
+            dataTable.Columns.Add("ProductName");
+            dataTable.Columns.Add("Quantity");
+            dataTable.Columns.Add("UnitPrice");
+            dataTable.Columns.Add("Price");
+            //Add rows to the DataTable
+            //dataTable.Rows.Add(new object[] { "CA-1098", "Queso Cabrales", "12", "14", "1", "167" });
+            dataTable.Rows.Add(new object[] { "CA-1098", "Queso Cabrales", "12", "14", "1", "167" });
+            //Assign data source
+            pdfGrid.DataSource = dataTable;
+            //Draw grid to the page of PDF document
+            pdfGrid.Draw(page, new Syncfusion.Drawing.PointF(10, 100));
+            //Save the document
+
+            //Close the document
+
+            FileStream stream = new FileStream("output3.pdf", FileMode.OpenOrCreate);
+            document.Save(stream);
+            //Close the document.
+            document.Close(true);
+        
+    
+    }*/
+
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (valueId != null)
@@ -166,16 +215,6 @@ namespace PharmacyStore.CustomerUC
 
                 }
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 finally
                 {
                     query = "select quantity from medicine where mid = '" + valueId + "'";
@@ -185,6 +224,7 @@ namespace PharmacyStore.CustomerUC
 
                     query = "update medicine set quantity = '" + newQuantity + "' where mid = '" + valueId + "'";
                     fn.setData(query, "Medicine removed from cart.");
+                    if (totalPrice>0)
                     totalPrice = totalPrice - valuePrice;
                     TotalLabel.Text = totalPrice.ToString();
                 }
@@ -195,19 +235,33 @@ namespace PharmacyStore.CustomerUC
 
         private void btnPurchasePrint_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Are you sure you want to Purchase?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //DialogResult res = MessageBox.Show("Are you sure you want to Purchase?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-            if (res == DialogResult.Yes)
-            {
-                String X = TotalLabel.Text;
-                PurchaseForm form = new PurchaseForm(X, guna2DataGridView1);
+            ////   if (res == DialogResult.Yes)
+            //  {
+            //  String total_price = TotalLabel.Text;
+            //  PurchaseForm form = new PurchaseForm(total_price, guna2DataGridView1);
 
-                form.Show();
+            //   form.Show();
 
-                //Some task…
-                totalPrice = 0;
-                TotalLabel.Text = "";
-            }
+
+
+            DGVPrinter print = new DGVPrinter();
+            print.Title = "Medicine Bill";
+            print.SubTitle = String.Format("Date: {0}", DateTime.Now.Date);
+            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            print.PageNumbers = true;
+            print.PageNumberInHeader = false;
+            print.PorportionalColumns = true;
+            print.HeaderCellAlignment = StringAlignment.Near;
+            print.Footer = "Total Payable Amount : " + TotalLabel.Text;
+            print.FooterSpacing = 15;
+            print.PrintDataGridView(guna2DataGridView1);
+            guna2DataGridView1.DataSource = 0;
+            
+            totalPrice = 0;
+            TotalLabel.Text = "";
+          //  }
 
         }
     }

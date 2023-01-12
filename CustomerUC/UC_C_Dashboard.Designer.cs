@@ -89,10 +89,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(26, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(243, 175);
+            this.label6.Size = new System.Drawing.Size(178, 150);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Task performed:\r\n\r\n   ->add medicines\r\n   ->view medicines\r\n   ->medicine managem" +
-    "ent\r\n   \r\n\r\n";
+            this.label6.Text = "Task performed:\r\n\r\n   ->buy medicines\r\n   ->view medicines\r\n   \r\n\r\n";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 

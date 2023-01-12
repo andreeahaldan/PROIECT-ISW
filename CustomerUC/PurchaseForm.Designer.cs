@@ -31,7 +31,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // guna2HtmlLabel1
             // 
@@ -70,6 +70,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "Save as pdf";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // PurchaseForm
             // 

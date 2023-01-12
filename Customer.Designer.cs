@@ -34,7 +34,6 @@
             this.customer_label = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
-            this.btnViewPurchase = new Guna.UI2.WinForms.Guna2Button();
             this.btnBuyMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.uC_C_Dashboard1 = new PharmacyStore.CustomerUC.UC_C_Dashboard();
             this.uC_C_BuyMedicine1 = new PharmacyStore.CustomerUC.UC_C_BuyMedicine();
-            this.uC_C_ViewPurchase1 = new PharmacyStore.CustomerUC.UC_C_ViewPurchase();
             this.uC_C_Profile1 = new PharmacyStore.CustomerUC.UC_C_Profile();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -59,7 +57,6 @@
             this.panel1.Controls.Add(this.customer_label);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnProfile);
-            this.panel1.Controls.Add(this.btnViewPurchase);
             this.panel1.Controls.Add(this.btnBuyMedicine);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.label1);
@@ -91,7 +88,7 @@
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnLogOut.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnLogOut.Location = new System.Drawing.Point(105, 578);
+            this.btnLogOut.Location = new System.Drawing.Point(105, 506);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(240, 45);
             this.btnLogOut.TabIndex = 6;
@@ -110,32 +107,13 @@
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnProfile.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnProfile.Location = new System.Drawing.Point(105, 508);
+            this.btnProfile.Location = new System.Drawing.Point(105, 437);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(240, 45);
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Update Profile";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // btnViewPurchase
-            // 
-            this.btnViewPurchase.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnViewPurchase.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnViewPurchase.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.btnViewPurchase.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnViewPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPurchase.ForeColor = System.Drawing.Color.White;
-            this.btnViewPurchase.Image = ((System.Drawing.Image)(resources.GetObject("btnViewPurchase.Image")));
-            this.btnViewPurchase.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnViewPurchase.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnViewPurchase.Location = new System.Drawing.Point(105, 437);
-            this.btnViewPurchase.Name = "btnViewPurchase";
-            this.btnViewPurchase.Size = new System.Drawing.Size(240, 45);
-            this.btnViewPurchase.TabIndex = 4;
-            this.btnViewPurchase.Text = "View Purchase";
-            this.btnViewPurchase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnViewPurchase.Click += new System.EventHandler(this.btnViewPurchase_Click);
             // 
             // btnBuyMedicine
             // 
@@ -200,7 +178,6 @@
             // 
             this.panel2.Controls.Add(this.uC_C_Dashboard1);
             this.panel2.Controls.Add(this.uC_C_BuyMedicine1);
-            this.panel2.Controls.Add(this.uC_C_ViewPurchase1);
             this.panel2.Controls.Add(this.uC_C_Profile1);
             this.panel2.Location = new System.Drawing.Point(440, 0);
             this.panel2.Name = "panel2";
@@ -222,14 +199,6 @@
             this.uC_C_BuyMedicine1.Name = "uC_C_BuyMedicine1";
             this.uC_C_BuyMedicine1.Size = new System.Drawing.Size(940, 768);
             this.uC_C_BuyMedicine1.TabIndex = 2;
-            // 
-            // uC_C_ViewPurchase1
-            // 
-            this.uC_C_ViewPurchase1.BackColor = System.Drawing.Color.White;
-            this.uC_C_ViewPurchase1.Location = new System.Drawing.Point(0, 0);
-            this.uC_C_ViewPurchase1.Name = "uC_C_ViewPurchase1";
-            this.uC_C_ViewPurchase1.Size = new System.Drawing.Size(940, 768);
-            this.uC_C_ViewPurchase1.TabIndex = 1;
             // 
             // uC_C_Profile1
             // 
@@ -282,7 +251,6 @@
         private System.Windows.Forms.Label customer_label;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnProfile;
-        private Guna.UI2.WinForms.Guna2Button btnViewPurchase;
         private Guna.UI2.WinForms.Guna2Button btnBuyMedicine;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private System.Windows.Forms.Label label1;

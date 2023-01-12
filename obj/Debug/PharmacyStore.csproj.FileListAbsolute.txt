@@ -29,3 +29,11 @@ C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Guna.UI2.dll
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.csproj.CopyComplete
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.exe
 C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\obj\Debug\PharmacyStore.pdb
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Aspose.PDF.dll
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Aspose.PDF.xml
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Syncfusion.Compression.Portable.dll
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Syncfusion.Pdf.Portable.dll
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Syncfusion.Compression.Portable.xml
+C:\Users\Claudiu-\OneDrive\Documente\GitHub\PROIECT-ISW\bin\Debug\Syncfusion.Pdf.Portable.xml
