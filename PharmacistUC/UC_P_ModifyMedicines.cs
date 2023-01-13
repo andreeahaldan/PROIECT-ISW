@@ -89,8 +89,8 @@ namespace PharmacyStore.PharmacistUC
 
             totalQuan = quan + addquan;
 
-            query = "update medicine set mname= '"+medname+ "' , mnumber= '"+mednr+ "', mDate= '"+mdate+ "', eDate= '"+edate+"', quantity=" +totalQuan+", perUnit="+price+" where mid= '"+txtMedName.Text+"'  ";
-            fn.setData(query, "Medicine details updated");
+           query = "update medicine set mname= '"+medname+ "' , mnumber= '"+mednr+ "', mDate= '"+mdate+ "', eDate= '"+edate+"', quantity=" +totalQuan+", perUnit="+price+" where mname= '"+txtMedName.Text+"'  ";
+           fn.setData(query, "Medicine record updated");
 
         }
     }
