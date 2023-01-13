@@ -1,4 +1,4 @@
-﻿using Aspose.Pdf;
+﻿
 using DGVPrinterHelper;
 using Guna.UI2.WinForms;
 using Syncfusion.Pdf;
@@ -10,7 +10,6 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
-using Aspose.Pdf.Forms;
 using System.Xml.Linq;
 
 using System.Drawing.Printing;

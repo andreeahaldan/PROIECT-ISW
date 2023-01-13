@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Xml.Linq;
 
 namespace PharmacyStore.AdministratorUC
 {
@@ -18,6 +20,59 @@ namespace PharmacyStore.AdministratorUC
         {
             InitializeComponent();
         }
+       
+
+        private Boolean Validate_Passwords(String pass)
+        {//cel putin 5 caractere
+            if (pass.Length < 5)
+            {
+                MessageBox.Show("Password is too short (min 5 characters)");
+                return false;
+            }
+            else return true;
+
+        }
+
+        private Boolean Validate_username(String username)
+        {//cel putin 3 caractere
+            if (username.Length < 3)
+            {
+                MessageBox.Show("Username is too short (min 3 characters)");
+                return false;
+            }
+            else return true;
+        }
+
+        private Boolean Validate_email(string email)
+        {//sa contina @
+            if (!email.Contains("@")) {
+                MessageBox.Show("Email is not valid");
+                return false;
+            }
+            else return true;
+
+        }
+
+        private Boolean Validate_mobile(long mobile)
+        { //numai cifre 
+            throw new NotImplementedException();
+        }
+
+        private Boolean Validate_dob(String dob)
+        {//cel putin 18 ani de la data curenta
+            throw new NotImplementedException();
+        }
+
+        private Boolean Validate_name(string name)
+        {//Doar litere
+            
+            throw new NotImplementedException();
+        }
+       // private Boolean AllFieldsAreValid()
+        //{
+        //    if()
+        //    return true;
+       // }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
@@ -28,7 +83,12 @@ namespace PharmacyStore.AdministratorUC
             String email = txtEmail.Text;
             String username = txtUserName.Text;
             String pass = txtPassword.Text;
-
+           // Validate_name(name);
+           // Validate_dob(dob);
+           // Validate_mobile(mobile);
+            if(Validate_email(email) &
+            Validate_username(username)&
+            Validate_Passwords(pass))
             try
             {
                 query = "insert into [users] (userRole,name,dob,mobile,email,username,pass) values ('" + role

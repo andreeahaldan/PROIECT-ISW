@@ -48,6 +48,7 @@ namespace PharmacyStore
             if (txtUsername.Text != "")
                 if (!inj_check.WordCheck(txtUsername.Text))
                 {
+
                     query = "Select * from users where username='" + txtUsername.Text + "'and pass='" + txtPassword.Text + "'";
                     ds = fn.getData(query);
                     if (ds.Tables[0].Rows.Count > 0)
