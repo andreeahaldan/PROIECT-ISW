@@ -220,7 +220,9 @@ namespace PharmacyStore.CustomerUC
             ;
 
             Random r = new Random();
-            String s = "../../Receipts/Receipt" + r.Next() + ".pdf";
+            String currentdir= (Path.GetDirectoryName(Application.ExecutablePath)).ToString();
+            Directory.CreateDirectory(currentdir+"/Receipts");
+            String s = currentdir+"/Receipts/Receipt" + r.Next() + ".pdf";
             FileStream stream = new FileStream(s, FileMode.Create);
             document.Save(stream);
             //Close the document.
