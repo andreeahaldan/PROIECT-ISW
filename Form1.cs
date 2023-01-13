@@ -42,73 +42,45 @@ namespace PharmacyStore
         private void btnSignIn_Click(object sender, EventArgs e)
        {
 
-            //query = "Select * from Users ";
-            DataSet ds;
-        /*    if (ds.Tables[0].Rows.Count == 0)
-            {
-                if (txtUsername.Text == "root" && txtPassword.Text == "root")
+           DataSet ds;
+       
+            InjectionChecker inj_check= new InjectionChecker();
+            if (txtUsername.Text != "")
+                if (!inj_check.WordCheck(txtUsername.Text))
                 {
-                    Administrator admin = new Administrator();
-                    admin.Show();
-                    this.Hide();
-                }
-            }else*/
-           
-                query = "Select * from users where username='" + txtUsername.Text + "'and pass='" + txtPassword.Text + "'";
-                ds=fn.getData(query);
-            if (ds.Tables[0].Rows.Count > 0)
-            { String role = ds.Tables[0].Rows[0][1].ToString();
-               
-                if (role == "Administrator")
-                {
-                    Administrator admin = new Administrator(txtUsername.Text);
-                    admin.Show();
-                    this.Hide();
-                }
-                else if (role == "Pharmacist")
-                {
-                    Pharmacist pharm = new Pharmacist(txtUsername.Text);
-                    pharm.Show();
-                    this.Hide();
+                    query = "Select * from users where username='" + txtUsername.Text + "'and pass='" + txtPassword.Text + "'";
+                    ds = fn.getData(query);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        String role = ds.Tables[0].Rows[0][1].ToString();
 
+                        if (role == "Administrator")
+                        {
+                            Administrator admin = new Administrator(txtUsername.Text);
+                            admin.Show();
+                            this.Hide();
+                        }
+                        else if (role == "Pharmacist")
+                        {
+                            Pharmacist pharm = new Pharmacist(txtUsername.Text);
+                            pharm.Show();
+                            this.Hide();
+
+                        }
+                        else if (role == "Customer")
+                        {
+                            Customer customer = new Customer(txtUsername.Text);
+                            customer.Show();
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else if (role == "Customer")
-                {
-                    Customer customer = new Customer(txtUsername.Text);
-                    customer.Show();
-                    this.Hide();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Wrong Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            else MessageBox.Show("Risk detected, aborting", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-
-       /*   if(txtUsername.Text=="admin" && txtPassword.Text=="1234")
-           {
-               Administrator admin = new Administrator();
-               admin.Show();
-               this.Hide();
-           }
-           else if (txtUsername.Text == "pharmacist" && txtPassword.Text == "4321")
-           {
-               Pharmacist pharm = new Pharmacist();
-               pharm.Show();
-               this.Hide();
-           }
-           else if (txtUsername.Text == "customer" && txtPassword.Text == "1111")
-           {
-               Customer customer = new Customer();
-               customer.Show();
-               this.Hide();
-           }
-           else
-           {
-               MessageBox.Show("Wrong Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           }*/
        }
 
         private void Form1_Load_1(object sender, EventArgs e)
