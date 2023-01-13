@@ -9,3 +9,7 @@ HOSU TEODOR
 HALDAN ANDREEA
 
 https://www.meistertask.com/app/project/vT701dPN/proiect-isw
+
+
+
+PROIECTUL NECESITA INSTALAREA PACHETULUI   ASPOSE.PDF
