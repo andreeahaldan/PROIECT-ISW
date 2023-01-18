@@ -66,11 +66,6 @@ namespace PharmacyStore.AdministratorUC
             }
         }
 
-        private Boolean Validate_dob(String dob)
-        {//cel putin 18 ani de la data curenta
-            throw new NotImplementedException();
-
-        }
         public static bool IsAllLetters(string s) { foreach (char c in s) { if (!Char.IsLetter(c)) return false; } return true; }
         private Boolean Validate_name(string name)
         {
@@ -79,17 +74,12 @@ namespace PharmacyStore.AdministratorUC
                 return true;
             else
             {
-                MessageBox.Show("Name field is not valid, only [a-z,A-Z] characters are allowed ");
+                MessageBox.Show("Name field is not valid, only letters are allowed ");
                 return false;
 
             }
         }
-       // private Boolean AllFieldsAreValid()
-        //{
-        //    if()
-        //    return true;
-       // }
-
+   
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             String role = txtUserRole.Text;
@@ -100,13 +90,13 @@ namespace PharmacyStore.AdministratorUC
             String username = txtUserName.Text;
             String pass = txtPassword.Text;
            
-           // Validate_dob(dob);
+          
            
             if(Validate_name(name)&
-                Validate_email(email) &
-            Validate_username(username)&
-            Validate_Passwords(pass)&
-                Validate_mobile(mobile)
+               Validate_email(email) &
+               Validate_username(username)&
+               Validate_Passwords(pass)&
+               Validate_mobile(mobile)
                 
                 )
             try
@@ -170,6 +160,13 @@ namespace PharmacyStore.AdministratorUC
 
         }
 
-        
+
+        private void txtDateOfBirth_Click(object sender, EventArgs e)
+        {
+          
+            txtDateOfBirth.MaxDate = DateTime.Today.AddYears(-18);
+            
+
+        }
     }
 }
