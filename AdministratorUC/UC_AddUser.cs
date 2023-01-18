@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace PharmacyStore.AdministratorUC
 {
@@ -53,20 +54,35 @@ namespace PharmacyStore.AdministratorUC
 
         }
 
-        private Boolean Validate_mobile(long mobile)
-        { //numai cifre 
-            throw new NotImplementedException();
+        private Boolean Validate_mobile(String mobile)
+        { 
+            if (Regex.Match(mobile, @"^(\+[0-9]{11})$").Success)
+                return true;
+            else
+            {
+                MessageBox.Show("Mobile number is not valid");
+                return false; 
+            
+            }
         }
 
         private Boolean Validate_dob(String dob)
         {//cel putin 18 ani de la data curenta
             throw new NotImplementedException();
-        }
 
+        }
+        public static bool IsAllLetters(string s) { foreach (char c in s) { if (!Char.IsLetter(c)) return false; } return true; }
         private Boolean Validate_name(string name)
-        {//Doar litere
-            
-            throw new NotImplementedException();
+        {
+
+            if (IsAllLetters(name) & (name.Length>1))
+                return true;
+            else
+            {
+                MessageBox.Show("Name field is not valid, only [a-z,A-Z] characters are allowed ");
+                return false;
+
+            }
         }
        // private Boolean AllFieldsAreValid()
         //{
@@ -79,16 +95,20 @@ namespace PharmacyStore.AdministratorUC
             String role = txtUserRole.Text;
             String name = txtName.Text;
             String dob = txtDateOfBirth.Text;
-            Int64 mobile = Int64.Parse(txtMobileNo.Text);
+            String mobile = txtMobileNo.Text;
             String email = txtEmail.Text;
             String username = txtUserName.Text;
             String pass = txtPassword.Text;
-           // Validate_name(name);
+           
            // Validate_dob(dob);
-           // Validate_mobile(mobile);
-            if(Validate_email(email) &
+           
+            if(Validate_name(name)&
+                Validate_email(email) &
             Validate_username(username)&
-            Validate_Passwords(pass))
+            Validate_Passwords(pass)&
+                Validate_mobile(mobile)
+                
+                )
             try
             {
                 query = "insert into [users] (userRole,name,dob,mobile,email,username,pass) values ('" + role
@@ -133,9 +153,11 @@ namespace PharmacyStore.AdministratorUC
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
+
+
             query = "select * from [USERS] where username='" + txtUserName.Text + "'";
             DataSet ds = fn.getData(query);
-            if (ds.Tables[0].Rows.Count == 0)
+            if (ds.Tables[0].Rows.Count == 0 & txtUserName.Text.Length>5)
             {
                 pictureBox1.ImageLocation="../.././poze/yes.png";
             }
