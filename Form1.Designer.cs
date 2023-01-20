@@ -41,6 +41,7 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -180,7 +181,7 @@
             this.btnSignIn.HoverState.BorderColor = System.Drawing.Color.Black;
             this.btnSignIn.HoverState.FillColor = System.Drawing.Color.White;
             this.btnSignIn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
-            this.btnSignIn.Location = new System.Drawing.Point(705, 517);
+            this.btnSignIn.Location = new System.Drawing.Point(706, 527);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(146, 36);
             this.btnSignIn.TabIndex = 8;
@@ -197,19 +198,33 @@
             this.btnReset.HoverState.BorderColor = System.Drawing.Color.Black;
             this.btnReset.HoverState.FillColor = System.Drawing.Color.White;
             this.btnReset.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
-            this.btnReset.Location = new System.Drawing.Point(903, 517);
+            this.btnReset.Location = new System.Drawing.Point(903, 527);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(146, 36);
             this.btnReset.TabIndex = 9;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(820, 497);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(115, 16);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Forgot password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1380, 768);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtPassword);
@@ -247,6 +262,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnSignIn;
         private Guna.UI2.WinForms.Guna2Button btnReset;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

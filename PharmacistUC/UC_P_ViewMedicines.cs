@@ -67,5 +67,35 @@ namespace PharmacyStore.PharmacistUC
             UC_P_ViewMedicines_Load(this, null);
 
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            
+            for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
+            {
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mnumber"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Lot Number";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("eDate")){
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Expire Date";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mDate"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Manufacture Date";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("perUnit"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value+=" ($)";
+                }
+                guna2DataGridView1.Columns[i].HeaderCell.Value = guna2DataGridView1.Columns[i].HeaderCell.Value.ToString().ToUpper();
+
+            }
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace PharmacyStore.PharmacistUC
     {
         function fn = new function();
         String query;
+       
 
         public UC_P_MedicineValidityCheck()
         {
@@ -23,17 +24,24 @@ namespace PharmacyStore.PharmacistUC
 
         private void txtCheckbox_SelectedIndexChanged(object sender, EventArgs e)
         {
+        
+            String localdate= DateTime.Today.ToString("dd.MM.yyyy");
+
 
             if (txtCheckbox.SelectedIndex == 0)
             {
-                query = "select * from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy')";
-                setDataGridView(query, "Valid medicines", Color.Green);
-
+              //  query = "select * from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy')";
+                String query2 = "select * from medicine where eDate >='"+localdate+"'";
+                setDataGridView(query2, "Valid medicines", Color.Green);
+                MessageBox.Show(query2);
+               
             }
             else if (txtCheckbox.SelectedIndex == 1)
             {
                 query = "select * from medicine where eDate <= FORMAT (getdate(), 'dd.MM.yyyy')";
-                setDataGridView(query, "Expired medicines", Color.Red);
+                String query2 = "select * from medicine where eDate <='" + localdate + "'";
+                MessageBox.Show(query2);
+                setDataGridView(query2, "Expired medicines", Color.Red);
 
             }
             else if (txtCheckbox.SelectedIndex == 2)
@@ -52,6 +60,30 @@ namespace PharmacyStore.PharmacistUC
 
         }
 
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
+            {
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mnumber"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Lot Number";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("eDate"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Expire Date";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mDate"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Manufacture Date";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("perUnit"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value += " ($)";
+                }
+                guna2DataGridView1.Columns[i].HeaderCell.Value = guna2DataGridView1.Columns[i].HeaderCell.Value.ToString().ToUpper();
+
+            }
+        }
     }
 
 }

@@ -17,9 +17,9 @@ namespace PharmacyStore
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-             con.ConnectionString = "Data source = tcp:iswpharmacyserver.database.windows.net,1433;Initial Catalog=PharmacyDB;Persist Security Info=False;User ID=iswadmin;Password=!proiectisw123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+//con.ConnectionString = "Data source = tcp:iswpharmacyserver.database.windows.net,1433;Initial Catalog=PharmacyDB;Persist Security Info=False;User ID=iswadmin;Password=!proiectisw123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
    
-          //  con.ConnectionString = "Data Source=(localdb)\\ProjectModels;Initial Catalog=PharmacyDB1;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+         con.ConnectionString = "Data Source=(localdb)\\ProjectModels;Initial Catalog=PharmacyDB1;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             return con;
         }
 

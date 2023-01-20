@@ -85,13 +85,83 @@ namespace PharmacyStore.PharmacistUC
             String edate = expDate.Text;    
             Int64 quan=Int64.Parse(txtQuan.Text);
             Int64 addquan=Int64.Parse(txtAddQuan.Text);
-            Int64 price=Int64.Parse(txtPPU.Text);
+            String price=txtPPU.Text;
 
             totalQuan = quan + addquan;
+            if (ValidatePricePerUnit(price) &
 
-           query = "update medicine set mname= '"+medname+ "' , mnumber= '"+mednr+ "', mDate= '"+mdate+ "', eDate= '"+edate+"', quantity=" +totalQuan+", perUnit="+price+" where mname= '"+txtMedName.Text+"'  ";
-           fn.setData(query, "Medicine record updated");
+                ValidateName(medname) &
+                ValidateNumber(mednr) &
+                ValidateQuantity(quan.ToString()) &
+                  ValidateQuantity(totalQuan.ToString())
+
+                )
+            {
+
+                query = "update medicine set mname= '" + medname + "' , mnumber= '" + mednr + "', mDate= '" + mdate + "', eDate= '" + edate + "', quantity=" + totalQuan + ", perUnit=" + price + " where mname= '" + txtMedName.Text + "'  ";
+                fn.setData(query, "Medicine record updated");
+            }
+        }
+
+        public static bool IsNumber(string s)
+        { foreach (char c in s) { if (!Char.IsDigit(c)) return false; } return true; }
+        private Boolean ValidatePricePerUnit(String ppu)
+        {
+            if (IsNumber(ppu))
+            {
+
+
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Price per unit not valid, enter a number");
+                return false;
+            }
 
         }
+
+
+        private Boolean ValidateQuantity(String quan)
+        {
+            if (IsNumber(quan))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Quantity not valid, enter a number");
+                return false;
+            }
+
+        }
+
+        private Boolean ValidateNumber(String mnr)
+        {
+            if (IsNumber(mnr))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Medicine Number not valid, enter a number");
+                return false;
+            }
+        }
+
+        private Boolean ValidateName(string mname)
+        {
+            if (mname.Length > 1)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Name is not valid,at least two characters are allowed");
+                return false;
+            }
+        }
+
+        
     }
 }

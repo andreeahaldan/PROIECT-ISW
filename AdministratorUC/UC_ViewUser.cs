@@ -71,5 +71,13 @@ namespace PharmacyStore.AdministratorUC
         {
             UC_ViewUser_Load(this, null);
         }
+
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
+            {
+                guna2DataGridView1.Columns[i].HeaderCell.Value = guna2DataGridView1.Columns[i].HeaderCell.Value.ToString().ToUpper();
+            }
+        }
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Xml.Linq;
 using System.Text.RegularExpressions;
+using Syncfusion.Pdf.Parsing;
+using System.Security.Cryptography;
 
 namespace PharmacyStore.AdministratorUC
 {
@@ -55,9 +57,16 @@ namespace PharmacyStore.AdministratorUC
         }
 
         private Boolean Validate_mobile(String mobile)
-        { 
-            if (Regex.Match(mobile, @"^(\+[0-9]{11})$").Success)
-                return true;
+        {
+           
+
+
+          
+            if (Regex.Match(mobile, "[0][237][0-9]{8}$").Success)
+            {
+             
+                
+            return true; }
             else
             {
                 MessageBox.Show("Mobile number is not valid");
@@ -85,35 +94,41 @@ namespace PharmacyStore.AdministratorUC
             String role = txtUserRole.Text;
             String name = txtName.Text;
             String dob = txtDateOfBirth.Text;
-            String mobile = txtMobileNo.Text;
+            String mobiletxt = txtMobileNo.Text;
             String email = txtEmail.Text;
             String username = txtUserName.Text;
             String pass = txtPassword.Text;
-           
-          
-           
-            if(Validate_name(name)&
+
+
+
+            
+            if(
+                Validate_name(name)&
                Validate_email(email) &
                Validate_username(username)&
                Validate_Passwords(pass)&
-               Validate_mobile(mobile)
+               Validate_mobile(mobiletxt)
                 
                 )
             try
             {
-                query = "insert into [users] (userRole,name,dob,mobile,email,username,pass) values ('" + role
+                    
+                    Haschode hashcoder = new Haschode();
+                    String hashpassword = hashcoder.Hashcode(txtPassword.Text);
+
+                 query = "insert into [users] (userRole,name,dob,mobile,email,username,pass) values ('" + role
                     + "' ,'"
                     + name +
                     "','" +
                     dob +
                     "','" +
-                    mobile +
+                    mobiletxt +
                     "','" +
                     email +
                    "','" +
                     username +
                     "','" +
-                    pass + "' )";
+                    hashpassword + "' )";
                 fn.setData(query, "Sign Up Succesfull");
 
             }
@@ -168,5 +183,7 @@ namespace PharmacyStore.AdministratorUC
             
 
         }
+
+      
     }
 }

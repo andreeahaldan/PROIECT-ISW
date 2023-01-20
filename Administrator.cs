@@ -70,5 +70,10 @@ namespace PharmacyStore
             uC_Profile1.Visible = true;
             uC_Profile1.BringToFront();
         }
+
+        private void uC_Profile1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

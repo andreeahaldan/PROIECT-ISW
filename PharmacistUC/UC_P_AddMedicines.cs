@@ -43,7 +43,7 @@ namespace PharmacyStore.PharmacistUC
                 ValidateQuantity(quan)
                     
                     ){
-                    ppu += "$";
+                    
                     query = "INSERT INTO medicine (mid,mname,mnumber,mDate,eDate,quantity,perUnit)" +
                         " values ('" + mid + "','" + mname + "','" + mnr + "','" + mdate + "','" + mexp + "'," + quan + "," + ppu + ")";
                     fn.setData(query, "Medicine added to database.");
@@ -63,7 +63,8 @@ namespace PharmacyStore.PharmacistUC
         {
             if (IsNumber(ppu))
             {
-                ppu += "$";
+                
+                
                 return true; 
             }
             else

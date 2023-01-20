@@ -215,11 +215,13 @@
             this.uC_Profile1.Name = "uC_Profile1";
             this.uC_Profile1.Size = new System.Drawing.Size(940, 768);
             this.uC_Profile1.TabIndex = 3;
+            this.uC_Profile1.Load += new System.EventHandler(this.uC_Profile1_Load);
             // 
             // uC_ViewUser1
             // 
             this.uC_ViewUser1.BackColor = System.Drawing.Color.White;
             this.uC_ViewUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ViewUser1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_ViewUser1.Name = "uC_ViewUser1";
             this.uC_ViewUser1.Size = new System.Drawing.Size(940, 768);
             this.uC_ViewUser1.TabIndex = 2;
@@ -228,6 +230,7 @@
             // 
             this.uC_AddUser1.BackColor = System.Drawing.Color.White;
             this.uC_AddUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddUser1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uC_AddUser1.Name = "uC_AddUser1";
             this.uC_AddUser1.Size = new System.Drawing.Size(940, 768);
             this.uC_AddUser1.TabIndex = 1;
