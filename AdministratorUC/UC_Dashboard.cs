@@ -44,11 +44,7 @@ namespace PharmacyStore.AdministratorUC
             {
                 counter = p_counter;
             }
-            else if (role == "Customer")
-            {
-                counter = c_counter;
-            }
-
+          
             setRoleCounter(ds, counter);
         }
       

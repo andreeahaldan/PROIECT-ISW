@@ -146,8 +146,7 @@
             this.txtUserRole.ItemHeight = 30;
             this.txtUserRole.Items.AddRange(new object[] {
             "Administrator",
-            "Pharmacist",
-            "Customer"});
+            "Pharmacist"});
             this.txtUserRole.Location = new System.Drawing.Point(84, 222);
             this.txtUserRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserRole.Name = "txtUserRole";

@@ -76,6 +76,15 @@ namespace PharmacyStore.AdministratorUC
         {
             for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
             {
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("pass"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Password";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("dob"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Date of Birth";
+                }
+
                 guna2DataGridView1.Columns[i].HeaderCell.Value = guna2DataGridView1.Columns[i].HeaderCell.Value.ToString().ToUpper();
             }
         }

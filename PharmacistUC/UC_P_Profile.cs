@@ -31,7 +31,7 @@ namespace PharmacyStore.PharmacistUC
             txtDateOfBirth.Text = ds.Tables[0].Rows[0][3].ToString();
             txtMobile.Text = ds.Tables[0].Rows[0][4].ToString();
             txtEmail.Text = ds.Tables[0].Rows[0][5].ToString();
-            txtPassword.Text = ds.Tables[0].Rows[0][7].ToString();
+          
         }
 
         private void btnReset_Click(object sender, EventArgs e)

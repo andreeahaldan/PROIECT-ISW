@@ -22,6 +22,7 @@ namespace PharmacyStore.AdministratorUC
         public UC_AddUser()
         {
             InitializeComponent();
+            txtDateOfBirth.Value = DateTime.Now.AddYears(-18);    
         }
        
 

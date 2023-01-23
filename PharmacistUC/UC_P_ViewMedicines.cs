@@ -78,16 +78,25 @@ namespace PharmacyStore.PharmacistUC
             
             for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
             {
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mid"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Med. ID";
+                }
+                if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mname"))
+                {
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Med. Name";
+                }
+
                 if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mnumber"))
                 {
-                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Lot Number";
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Lot Nr.";
                 }
                 if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("eDate")){
-                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Expire Date";
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Exp. Date";
                 }
                 if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("mDate"))
                 {
-                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Manufacture Date";
+                    guna2DataGridView1.Columns[i].HeaderCell.Value = "Man. Date";
                 }
                 if (guna2DataGridView1.Columns[i].HeaderCell.Value.Equals("perUnit"))
                 {
