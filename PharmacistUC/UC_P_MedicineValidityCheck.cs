@@ -30,18 +30,18 @@ namespace PharmacyStore.PharmacistUC
 
             if (txtCheckbox.SelectedIndex == 0)
             {
-              //  query = "select * from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy')";
-                String query2 = "select * from medicine where eDate >='"+localdate+"'";
-                setDataGridView(query2, "Valid medicines", Color.Green);
-                MessageBox.Show(query2);
+               query = "select * from medicine where eDate >=FORMAT (getdate(), 'dd.MM.yyyy')";
+            //    String query2 = "select * from medicine where eDate >='"+localdate+"'";
+                setDataGridView(query, "Valid medicines", Color.Green);
+                ;
                
             }
             else if (txtCheckbox.SelectedIndex == 1)
             {
                 query = "select * from medicine where eDate <= FORMAT (getdate(), 'dd.MM.yyyy')";
-                String query2 = "select * from medicine where eDate <='" + localdate + "'";
-                MessageBox.Show(query2);
-                setDataGridView(query2, "Expired medicines", Color.Red);
+              //  String query2 = "select * from medicine where eDate <='" + localdate + "'";
+                
+                setDataGridView(query, "Expired medicines", Color.Red);
 
             }
             else if (txtCheckbox.SelectedIndex == 2)

@@ -47,7 +47,7 @@ namespace PharmacyStore.AdministratorUC
                String Email = txtEmail.Text;
              String password = h.Hashcode(txtPassword.Text);
 
-             Query = "update users set userRole='" + Role + "',name='" + Name + "',Date of Birth='" + DoB + "',mobile='" + Mobile+"',email='"+Email+"',Password='"+password+"'where username='"+Username+"'";
+             Query = "update users set userRole='" + Role + "',name='" + Name + "',dob='" + DoB + "',mobile='" + Mobile+"',email='"+Email+"',pass='"+password+"'where username='"+Username+"'";
             fn.setData(Query, "Profile was updated successfully");
         }
 
